@@ -12,7 +12,8 @@ var cors = require('cors');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var topicsRouter = require('./routes/topics');
-
+var tagsRouter = require('./routes/tags');
+var iqaRouter = require('./routes/iqas');
 
 
 
@@ -40,6 +41,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 app.use('/', indexRouter);
 app.use('/topics', topicsRouter);
+app.use('/tags', tagsRouter);
+app.use('/iqa',iqaRouter);
 
 
 app.use('/users', usersRouter);
